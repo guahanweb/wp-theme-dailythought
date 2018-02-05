@@ -2,11 +2,32 @@
 $thought = get_post_meta(get_the_ID(), 'gw_dailythought_blurb', true);
 $reference = get_post_meta(get_the_ID(), 'gw_dailythought_reference', true);
 $verse = get_post_meta(get_the_ID(), 'gw_dailythought_verse', true);
-?>
 
-<?php
 if (is_single()):
-    echo 'Single view not done...';
+?>
+<div class="container">
+    <div class="theme-masthead masthead-thought">
+        <div class="thought">
+            <h2 class="title"><?php the_title(); ?></h2>
+            <h1 class="content"><?php echo esc_html($thought); ?></h1>
+        </div>
+    </div>
+    <article class="thought thought-full thought-wrapper">
+        <div class="header">
+            <div class="published">
+                <div class="date"><?php the_date(); ?></div>
+            </div>
+            <div class="verse">
+                <p class="text"><?php echo esc_html($verse); ?></p>
+                <div class="reference"><p><?php echo esc_html($reference); ?></p></div>
+            </div>
+        </div>
+        <div class="thought-content">
+            <?php the_content(); ?>
+        </div>
+    </article>
+</div>
+<?php
 else:
 ?>
 <div class="container">
@@ -25,7 +46,7 @@ else:
         </div>
         <nav class="navbar">
             <ul class="navbar-list right-align">
-                <li class="navbar-item left-align"><a class="navbar-link" href="#">Read more</a></li>
+                <li class="navbar-item left-align"><a class="navbar-link" href="<?php the_permalink(); ?>">Read more</a></li>
                 <li class="navbar-item navbar-light"><span class="share-via navbar-link">Share:</span></li>
                 <li class="navbar-item"><a class="navbar-link social" href="#"><i class="fab fa-facebook"></i></a></li>
                 <li class="navbar-item"><a class="navbar-link social" href="#"><i class="fab fa-twitter"></i></a></li>

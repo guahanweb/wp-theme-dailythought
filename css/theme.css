@@ -1,0 +1,168 @@
+html * {
+    line-height: 1;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    background: #f8f8f8;
+}
+
+.container {
+    width: 800px;
+    margin: 20px auto;
+}
+
+.theme-masthead {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.theme-masthead .title h1 {
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 72px;
+}
+
+.theme-masthead .description h4 {
+    font-size: 24px;
+    font-weight: 300;
+    color: #777;
+    line-height: 36px;
+
+}
+
+.thought-wrapper {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.10);
+    padding: 20px 15px;
+    margin: 20px 0;
+}
+
+.thought-wrapper > .header {
+    text-align: center;
+}
+
+.thought-wrapper .header h1 {
+    font-weight: normal;
+    color: #3c97b7;
+}
+
+.thought-wrapper .header .published .date {
+    font-size: 12px;
+    line-height: 28px;
+    color: #aaa;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.thought-wrapper .header .verse {
+    padding: 16px 40px;
+}
+
+.thought-wrapper .header .verse .text {
+    font-size: 14px;
+    line-height: 1.6em;
+    color: #777;
+}
+
+.thought-wrapper .header .verse .reference {
+    margin-top: 4px;
+}
+
+.thought-wrapper .header .verse .reference p {
+    font-size: 16px;
+    color: #e89600;
+    font-weight: 300;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+}
+
+.thought-wrapper .navbar {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar {
+    display: block;
+    background: #fff;
+    z-index: 99;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-list {
+    list-style: none;
+}
+
+.navbar-list.right-align {
+    text-align: right;
+}
+
+.navbar-item {
+    display: inline-block;
+}
+
+.navbar-item.left-align {
+    display: block;
+    float: left;
+}
+
+.navbar-link {
+    line-height: 40px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-right: 8px;
+    text-decoration: none;
+    color: #444;
+}
+
+.navbar-link.social {
+    font-size: 16px;
+}
+
+.navbar-list.right-align .navbar-link {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+.navbar-list.right-align .left-align .navbar-link {
+    margin-right: 8px;
+    margin-left: 0;
+}
+
+.share-via {
+    color: #999;
+    font-weight: bold;
+}
+
+a {
+    transition: color 200ms ease;
+}
+
+a:hover {
+    color: #0fa0ce;
+}
+
+.site-footer {
+    font-size: 12px;
+}
+
+.copyright {
+    margin-top: 30px;
+    color: #aaa;
+    text-align: center;
+}

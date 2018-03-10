@@ -11,5 +11,5 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <?php wp_nav_menu(array('theme_location' => 'header-menu', 'container_class' => 'main-menu')); ?>
+    <?php wp_nav_menu(array('theme_location' => 'header_menu', 'container_class' => 'main-menu')); ?>
     <div id="content" class="site-content">

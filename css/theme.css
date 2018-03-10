@@ -11,6 +11,15 @@ body {
     background: #f8f8f8;
 }
 
+p {
+    line-height: 1.5em;
+    margin: 4px 0 16px;
+}
+
+strong {
+    font-weight: 600;
+}
+
 .container {
     width: 800px;
     margin: 20px auto;

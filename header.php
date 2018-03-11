@@ -14,7 +14,7 @@
     <header>
         <nav class="main-nav">
             <div class="site-logo">
-                <?php wp_title(); ?>
+                <a href="#"><h2 class="blog-title"><?php bloginfo('name') ?></h2><h3 class="blog-tagline"><?php bloginfo('description') ?></h3></a>
             </div>
             <?php wp_nav_menu(array('theme_location' => 'header_menu', 'container_class' => 'main-menu')); ?>
         </nav>

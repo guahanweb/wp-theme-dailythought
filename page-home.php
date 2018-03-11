@@ -1,6 +1,6 @@
 <?php
 /**
- * Blog Home Page Template
+ * Home Page Template
  * The home page template file
  *
  * This is the template for the Home Page

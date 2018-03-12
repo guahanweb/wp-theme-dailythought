@@ -11,6 +11,57 @@ body {
     background: #f8f8f8;
 }
 
+body > header {
+    padding-top: 28px;
+    background-color: #2F888F;
+    color: #fff;
+}
+
+header .main-nav {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+header .menu {
+    text-align: right;
+}
+
+header .menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header .menu li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+header .menu li a {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 8px 12px;
+}
+
+body > header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+body > header a:hover {
+    color: #FDB740;
+}
+
 p {
     line-height: 1.5em;
     margin: 4px 0 16px;
@@ -308,4 +359,3 @@ a:hover {
         margin: 0;
     }
 }
-

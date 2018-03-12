@@ -12,11 +12,13 @@
 </head>
 <body <?php body_class(); ?>>
     <header>
-        <nav class="main-nav">
-            <div class="site-logo">
-                <a href="#"><h2 class="blog-title"><?php bloginfo('name') ?></h2><h3 class="blog-tagline"><?php bloginfo('description') ?></h3></a>
-            </div>
-            <?php wp_nav_menu(array('theme_location' => 'header_menu', 'container_class' => 'main-menu')); ?>
-        </nav>
+        <div class="container">
+            <nav class="main-nav">
+                <div class="site-logo">
+                    <a href="#"><h1 class="blog-title"><?php bloginfo('name') ?></h1><p class="blog-tagline"><?php bloginfo('description') ?></p></a>
+                </div>
+                <?php wp_nav_menu(array('theme_location' => 'header_menu', 'container_class' => 'main-menu')); ?>
+            </nav>
+        </div>
     </header>
     <div id="content" class="site-content">

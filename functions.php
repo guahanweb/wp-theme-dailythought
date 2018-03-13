@@ -8,4 +8,6 @@ function register_theme_menus() {
     );
 }
 add_action('init', 'register_theme_menus');
+
+add_filter('show_admin_bar', '__return_false');
 ?>

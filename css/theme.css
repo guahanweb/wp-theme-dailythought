@@ -8,58 +8,86 @@ html * {
 
 body {
     font-family: 'Open Sans', Helvetica, sans-serif;
-    background: #f8f8f8;
+    background: #fff;
+    margin: 0;
+    padding: 0;
 }
 
-body > header {
-    padding-top: 28px;
-    background-color: #2F888F;
-    color: #fff;
+.top-bar {
+    background-color: #dbeceb;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    -webkit-backface-visibility: hidden;
+    top: 0;
 }
 
-header .main-nav {
-    -ms-box-orient: horizontal;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-between;
-    -webkit-align-items: center;
-    align-items: center;
+.top-bar .container {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-header .menu {
-    text-align: right;
-}
-
-header .menu ul {
+.top-bar .menu ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-header .menu li {
+.top-bar .menu li {
     margin: 0;
+    margin-right: 30px;
     padding: 0;
     display: inline-block;
 }
 
-header .menu li a {
+.top-bar .menu li a {
     display: block;
-    font-size: 14px;
+    font-size: 11px;
     font-weight: 300;
-    padding: 8px 12px;
-}
-
-body > header a {
-    color: #fff;
+    letter-spacing: 2px;
+    line-height: 50px;
     text-decoration: none;
+    color: #888;
+    text-transform: uppercase;
 }
 
-body > header a:hover {
-    color: #FDB740;
+.top-bar .menu li a:hover {
+    color: #e7950b;
+}
+
+header .site-logo a {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    text-decoration: none;
+    margin-top: 50px;
+    padding-top: 30px;
+}
+
+header .site-logo img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    z-index: 1;
+}
+
+header .site-logo .blog-tagline {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #555;
+    text-align: center;
+    margin-top: -60px;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    padding: 4px 15px;
+    text-shadow: 1px 1px 2px #fff;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: relative;
+    z-index: 99;
+    letter-spacing: 2px;
 }
 
 p {

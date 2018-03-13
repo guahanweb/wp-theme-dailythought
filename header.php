@@ -12,13 +12,20 @@
 </head>
 <body <?php body_class(); ?>>
     <header>
-        <div class="container">
-            <nav class="main-nav">
-                <div class="site-logo">
-                    <a href="#"><h1 class="blog-title"><?php bloginfo('name') ?></h1><p class="blog-tagline"><?php bloginfo('description') ?></p></a>
-                </div>
-                <?php wp_nav_menu(array('theme_location' => 'header_menu', 'container_class' => 'main-menu')); ?>
-            </nav>
+        <div class="top-bar">
+            <div class="container">
+                <nav class="main-nav">
+                    <?php wp_nav_menu(array('theme_location' => 'header_menu', 'container_class' => 'main-menu')); ?>
+                </nav>
+            </div>
+        </div>
+        <div class="site-logo">
+            <div class="container">
+                <a href="#">
+                    <img src="<?php echo get_theme_file_uri('img/header-title.png'); ?>" alt="Pacific Breezes" role="title">
+                    <p class="blog-tagline"><?php bloginfo('description') ?></p>
+                </a>
+            </div>
         </div>
     </header>
     <div id="content" class="site-content">

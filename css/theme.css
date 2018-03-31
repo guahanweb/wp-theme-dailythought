@@ -29,7 +29,7 @@ body {
     margin-bottom: 0;
 }
 
-.top-bar .menu ul {
+.top-bar .menu {
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -55,6 +55,28 @@ body {
 
 .top-bar .menu li a:hover {
     color: #e7950b;
+}
+
+.menu .sub-menu {
+    position: absolute;
+    display: none;
+    border: 1px solid #aaa;
+    background-color: #f8f8f8;
+    padding: 0;
+}
+
+.menu .sub-menu li {
+    display: block;
+}
+
+.menu .sub-menu li a {
+    padding: 15px;
+    line-height: 1;
+
+}
+
+.menu li:hover .sub-menu {
+    display: block;
 }
 
 header .site-logo a {
@@ -135,7 +157,7 @@ strong {
     font-size: 42px;
     font-weight: 300;
     line-height: 1.2em;
-    color: #3c97b7;
+    color: #48759C;
 }
 
 .thought-wrapper {
@@ -153,7 +175,7 @@ strong {
 
 .thought-wrapper .header h1 {
     font-weight: normal;
-    color: #3c97b7;
+    color: #48759C;
 }
 
 .thought-wrapper .header .published .date {
@@ -288,7 +310,7 @@ a:hover {
 }
 
 .gw-verse {
-    color: #3c97b7;
+    color: #2F888F;
     font-weight: 300;
     line-height: inherit;
 }

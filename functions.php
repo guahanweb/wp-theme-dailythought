@@ -39,23 +39,29 @@ function insertMetaTags() {
     if (!is_singular()) return;
 
     $type = get_post_type();
-    if ($type == 'thought') {
-        $thought = get_post_meta(get_the_ID(), 'gw_dailythought_blurb', true);
+    if ($type != 'thought' && !is_page()) return;
+
+    if (is_page()) {
+        $title = get_the_title();
+        $description = get_the_excerpt();
+    } else {
+        $title = get_post_meta(get_the_ID(), 'gw_dailythought_blurb', true);
         $reference = get_post_meta(get_the_ID(), 'gw_dailythought_reference', true);
         $verse = get_post_meta(get_the_ID(), 'gw_dailythought_verse', true);
+        $description = sprintf('%s (%s)', $verse, $reference);
+    }
 
-        $tags = array(
-            'og:title' => $thought,
-            'og:description' => sprintf('%s (%s)', $verse, $reference),
-            'og:type' => 'article',
-            'og:url' => get_the_permalink(),
-            'og:site_name' => 'Pacific Breezes',
-            'og:image' => get_template_directory_uri() . '/img/fb-image.jpg'
-        );
+    $tags = array(
+        'og:title' => $title,
+        'og:description' => $description,
+        'og:type' => 'article',
+        'og:url' => get_the_permalink(),
+        'og:site_name' => 'Pacific Breezes',
+        'og:image' => get_template_directory_uri() . '/img/fb-image.jpg'
+    );
 
-        foreach ($tags as $tag => $value) {
-            printf('<meta property="%s" content="%s"/>', $tag, $value);
-        }
+    foreach ($tags as $tag => $value) {
+        printf('<meta property="%s" content="%s"/>', $tag, $value);
     }
 }
 add_action('wp_head', 'insertMetaTags', 5);

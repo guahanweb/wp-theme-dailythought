@@ -49,7 +49,8 @@ function insertMetaTags() {
             'og:description' => sprintf('%s (%s)', $verse, $reference),
             'og:type' => 'article',
             'og:url' => get_the_permalink(),
-            'og:site_name' => 'Pacific Breezes'
+            'og:site_name' => 'Pacific Breezes',
+            'og:image' => get_the_theme_directory_uri() . '/img/fb-image.jpg'
         );
 
         foreach ($tags as $tag => $value) {

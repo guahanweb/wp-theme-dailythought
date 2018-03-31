@@ -48,9 +48,9 @@ else:
             <ul class="navbar-list right-align">
                 <li class="navbar-item left-align"><a class="navbar-link" href="<?php the_permalink(); ?>">Read more</a></li>
                 <li class="navbar-item navbar-light"><span class="share-via navbar-link">Share:</span></li>
-                <li class="navbar-item"><a class="navbar-link social" href="#"><i class="fab fa-facebook"></i></a></li>
-                <li class="navbar-item"><a class="navbar-link social" href="#"><i class="fab fa-twitter"></i></a></li>
-                <li class="navbar-item"><a class="navbar-link social" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                <li class="navbar-item"><?php do_action('social-link', 'facebook', 'navbar-link social external'); ?></li>
+                <li class="navbar-item"><?php do_action('social-link', 'twitter', 'navbar-link social external'); ?></li>
+                <li class="navbar-item"><?php do_action('social-link', 'google', 'navbar-link social external'); ?></li>
             </ul>
         </nav>
     </article>

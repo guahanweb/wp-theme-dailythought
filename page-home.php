@@ -21,9 +21,14 @@ $thoughts = get_posts(array(
 ));
 
 get_header();
+echo '<main class="page-content">';
 if (have_posts()):
     while(have_posts()): the_post();
-        the_content();
+        echo '<div class="container">';
+            echo '<div class="main-content">';
+                the_content();
+            echo '</div>';
+        echo '</div>';
     endwhile;
 endif;
 
@@ -32,7 +37,7 @@ if ($thoughts) {
         get_template_part('content', get_post_type());
     }
 }
-
+echo '</main>';
 get_footer();
 ?>
 

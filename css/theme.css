@@ -121,6 +121,24 @@ strong {
     font-weight: 600;
 }
 
+.page-content h1 {
+    font-size: 36px;
+    font-weight: 300;
+    color: #ff9746;
+    margin-top: 30px;
+    margin-bottom: 8px;
+}
+
+.page-content p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.page-content form {
+    margin-top: 30px;
+}
+
 .container {
     width: 800px;
     margin: 20px auto;

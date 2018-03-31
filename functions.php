@@ -1,4 +1,6 @@
 <?php
+add_post_type_support('page', 'excerpt');
+
 function render_social_link($platform, $class) {
     $url = '#';
     $icon = '';

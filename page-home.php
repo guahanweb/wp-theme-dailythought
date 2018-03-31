@@ -38,6 +38,15 @@ if ($thoughts) {
     foreach ($thoughts as $post) {
         get_template_part('content', get_post_type());
     }
+} else {
+?>
+    <div class="container">
+        <div class="coming-soon">
+            <h1>Coming Soon</h1>
+            <p>Keep an eye out for posts beginning on April 1, 2018!</p>
+        </div>
+    </div>
+<?php
 }
 echo '</main>';
 get_footer();

@@ -50,7 +50,7 @@ function insertMetaTags() {
             'og:type' => 'article',
             'og:url' => get_the_permalink(),
             'og:site_name' => 'Pacific Breezes',
-            'og:image' => get_the_theme_directory_uri() . '/img/fb-image.jpg'
+            'og:image' => get_template_directory_uri() . '/img/fb-image.jpg'
         );
 
         foreach ($tags as $tag => $value) {

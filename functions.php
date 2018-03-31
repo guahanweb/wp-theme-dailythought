@@ -27,5 +27,38 @@ function register_theme_menus() {
 }
 add_action('init', 'register_theme_menus');
 
+function addOpenGraphDoctype($output) {
+    return $output . '
+xmlns:og="http://opengraphprotocol.org/schema/"
+xmlns:fb="http://www.facebook.com/2008/fbml"';
+}
+add_filter('language_attributes', 'addOpenGraphDoctype');
+
+function insertMetaTags() {
+    global $post;
+    if (!is_singular()) return;
+
+    $type = get_post_type();
+    if ($type == 'thought') {
+        $thought = get_post_meta(get_the_ID(), 'gw_dailythought_blurb', true);
+        $reference = get_post_meta(get_the_ID(), 'gw_dailythought_reference', true);
+        $verse = get_post_meta(get_the_ID(), 'gw_dailythought_verse', true);
+
+        $tags = array(
+            'og:title' => $thought,
+            'og:description' => sprintf('%s (%s)', $verse, $reference),
+            'og:type' => 'article',
+            'og:url' => get_the_permalink(),
+            'og:site_name' => 'Pacific Breezes'
+        );
+
+        foreach ($tags as $tag => $value) {
+            printf('<meta property="%s" content="%s"/>', $tag, $value);
+        }
+    }
+}
+add_action('wp_head', 'insertMetaTags', 5);
+
+// remove admin bar
 add_filter('show_admin_bar', '__return_false');
 ?>

@@ -7,7 +7,6 @@
 <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" media="screen">
 <link type="text/css" rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.6/css/all.css" media="screen">
 <link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/theme.css'; ?>" media="screen">
-
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

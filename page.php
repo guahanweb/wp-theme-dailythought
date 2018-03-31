@@ -15,8 +15,11 @@
 get_header();
 if (have_posts()):
     while(have_posts()): the_post();
-        echo get_post_type();
-        get_template_part('content', get_post_type());
+        echo '<main class="page-content">';
+            echo '<div class="container">';
+                the_content();
+            echo '</div>';
+        echo '</div>';
     endwhile;
 endif;
 get_footer();

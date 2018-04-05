@@ -34,7 +34,7 @@ else:
     <article class="thought thought-wrapper">
         <div class="header">
             <div class="published">
-                <div class="date"><?php the_date(); ?></div>
+                <div class="date"><?php echo get_the_date('F j, Y'); ?></div>
             </div>
             <div class="short-thought">
                 <h1><?php echo esc_html($thought); ?></h1>

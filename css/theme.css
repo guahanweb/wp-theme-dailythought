@@ -154,16 +154,6 @@ strong {
     font-weight: 300;
 }
 
-.main-content ul {
-    margin-left: 30px;
-    list-style: circle;
-}
-
-.main-content ul li {
-    line-height: 1.4;
-    padding-bottom: 8px;
-}
-
 .coming-soon {
     margin: 40px 20px;
     border: 1px solid #ddd;
@@ -290,6 +280,16 @@ strong {
     line-height: 1.6em;
     margin-bottom: 18px;
     font-weight: 300;
+}
+
+.thought-content ul {
+    margin-left: 30px;
+    list-style: circle;
+}
+
+.thought-content ul li {
+    line-height: 1.4;
+    padding-bottom: 8px;
 }
 
 .navbar {

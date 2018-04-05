@@ -284,6 +284,7 @@ strong {
 
 .thought-content ul {
     margin-left: 30px;
+    margin-bottom: 10px;
     list-style: circle;
 }
 

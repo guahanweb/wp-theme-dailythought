@@ -30,6 +30,13 @@ if (have_posts()):
     while(have_posts()): the_post();
         get_template_part('content', get_post_type());
     endwhile;
+
+?>
+<nav class="pagination">
+    <div class="page-prev"><?php next_posts_link('Older thoughts'); ?></div>
+    <div class="page-next"><?php previous_posts_link('Newer thoughts'); ?></div>
+</nav>
+<?php
 endif;
 get_footer();
 ?>

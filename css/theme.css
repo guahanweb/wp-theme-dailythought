@@ -142,11 +142,14 @@ strong {
 label.form-label {
     font-weight: 400;
     font-size: 20px;
+    display: block;
+    padding-bottom: 8px;
 }
 
 .form-input.inline {
     display: inline-block;
     margin-right: 15px;
+    width: 280px;
 }
 
 input + p.form-info {

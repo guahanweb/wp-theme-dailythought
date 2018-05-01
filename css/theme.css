@@ -159,7 +159,7 @@ input + p.form-info {
     margin-top: 0;
 }
 
-.form-input input {
+.form-input input[type=text], .form-input input[type=email] {
     margin: 0;
     font-family: inherit;
     display: block;

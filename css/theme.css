@@ -139,6 +139,16 @@ strong {
     margin-top: 30px;
 }
 
+label.form-label {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.form-input.inline {
+    display: inline-block;
+    margin-right: 15px;
+}
+
 .container {
     width: 800px;
     margin: 20px auto;

@@ -144,6 +144,7 @@ label.form-label {
     font-size: 20px;
     display: block;
     padding-bottom: 8px;
+    cursor: pointer;
 }
 
 .form-input.inline {
@@ -173,6 +174,20 @@ input + p.form-info {
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-row.form-submit {
+    margin-top: 15px;
+}
+
+.form-input input[type=submit] {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 1em;
+    padding: 10px 15px;
+    border-radius: 2px;
+    cursor: pointer;
 }
 
 .form-input input:focus {

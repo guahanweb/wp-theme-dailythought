@@ -149,6 +149,13 @@ label.form-label {
     margin-right: 15px;
 }
 
+input + p.form-info {
+    font-size: 12px;
+    font-weight: 600;
+    color: #999;
+    margin-top: 0;
+}
+
 .container {
     width: 800px;
     margin: 20px auto;

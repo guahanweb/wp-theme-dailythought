@@ -177,7 +177,7 @@ input + p.form-info {
 }
 
 .form-row.form-submit {
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .form-input input[type=submit] {
@@ -188,6 +188,11 @@ input + p.form-info {
     padding: 10px 15px;
     border-radius: 2px;
     cursor: pointer;
+    transition: background .15s ease-in-out;
+}
+
+.form-input input[type=submit] {
+    background-color: #e3e3e3;
 }
 
 .form-input input:focus {

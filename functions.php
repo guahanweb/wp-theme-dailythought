@@ -42,7 +42,7 @@ function customNavigationLink($prev = false) {
     $src = get_template_directory_uri() . '/img/navigation.svg';
 
     $img = <<<EOT
-<div class="arrow ${cls}>
+<div class="arrow ${cls}">
     <div class="holder">
         <img src="${src}" />
     </div>

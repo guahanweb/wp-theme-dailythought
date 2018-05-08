@@ -473,9 +473,25 @@ a:hover {
     padding: 15px;
 }
 
+.page-links .content {
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.page-links a {
+    text-decoration: none;
+    color: #0fa0ce;
+}
+
+.page-links a:hover {
+    color: #1b7996;
+}
+
 .arrow.up svg {
     transform: rotate(180deg);
-    width: 32px;
+    width: 26px;
 }
 
 .arrow svg path {

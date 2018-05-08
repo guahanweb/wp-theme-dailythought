@@ -33,7 +33,7 @@ if (have_posts()):
 
 ?>
 <nav class="pagination">
-    <div class="page-prev"><?php next_posts_link('Older thoughts'); ?></div>
+    <div class="page-prev"><?php customPrevPostsLink(); ?></div>
     <div class="page-next"><?php previous_posts_link('Newer thoughts'); ?></div>
 </nav>
 <?php

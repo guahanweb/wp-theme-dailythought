@@ -36,6 +36,28 @@ xmlns:fb="http://www.facebook.com/2008/fbml"';
 }
 add_filter('language_attributes', 'addOpenGraphDoctype');
 
+function customPrevPostsLink() {
+    $prev = <<<EOL
+<div class="arrow up">
+    <svg><path d="M0 25 L0 15 L20 0 L40 15 L40 25 L20 10 Z"></path></svg>
+</div>
+<div class="content"><h4>Newer Thoughts</h4></div>
+EOL;
+
+    $prev = get_prev_posts_link($prev);
+    if ($prev) {
+        echo <<<EOL
+<div class="posts-link previous">
+    ${prev}
+</div>
+EOL;
+    }
+}
+
+function customNextPostsLink() {
+
+}
+
 function insertMetaTags() {
     global $post;
     if (!is_singular()) return;

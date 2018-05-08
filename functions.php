@@ -37,6 +37,7 @@ xmlns:fb="http://www.facebook.com/2008/fbml"';
 add_filter('language_attributes', 'addOpenGraphDoctype');
 
 function customPrevPostsLink() {
+    echo 'here';
     $prev = <<<EOL
 <div class="arrow up">
     <svg><path d="M0 25 L0 15 L20 0 L40 15 L40 25 L20 10 Z"></path></svg>

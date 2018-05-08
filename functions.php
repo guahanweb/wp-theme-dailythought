@@ -36,42 +36,29 @@ xmlns:fb="http://www.facebook.com/2008/fbml"';
 }
 add_filter('language_attributes', 'addOpenGraphDoctype');
 
-function customPrevPostsLink() {
-    $prev = <<<EOL
-<div class="arrow up">
-    <svg><path d="M0 25 L0 15 L20 0 L40 15 L40 25 L20 10 Z"></path></svg>
-</div>
-<div class="content"><h4>Newer Thoughts</h4></div>
-EOL;
+function customNavigationLink($prev = false) {
+    $cls = $prev ? 'up' : 'down';
+    $title = $prev ? 'Newer Thoughts' : 'Older Thoughts';
+    $src = get_template_directory_uri() . '/img/navigation.svg';
 
-    $link = get_previous_posts_link($prev);
-    if ($link) {
-        echo <<<EOL
-<div class="posts-link previous">
-    ${link}
-</div>
-EOL;
-    }
-}
-
-function customNextPostsLink() {
-    $next = <<<EOL
-<div class="content"><h4>Older Thoughts</h4></div>
-<div class="arrow up">
+    $img = <<<EOT
+<div class="arrow ${cls}>
     <div class="holder">
-        <img src="%s" />
+        <img src="${src}" />
     </div>
 </div>
-EOL;
+EOT;
 
-    $link = get_next_posts_link(sprintf($next, get_template_directory_uri() . '/img/navigation.svg'));
-    if ($link) {
-        echo <<<EOL
-<div class="posts-link previous">
-    ${link}
-</div>
-EOL;
+    $link = <<<EOT
+<div class="content"><h4>${title}</h4></div>
+EOT;
+
+    if ($prev) {
+        previous_posts_link("${img}\n${link}");
+    } else {
+        next_posts_link("${link}\n${img}");
     }
+
 }
 
 function insertMetaTags() {

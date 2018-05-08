@@ -33,8 +33,8 @@ if (have_posts()):
 
 ?>
 <nav class="pagination">
-    <?php customPrevPostsLink(); ?>
-    <?php customNextPostsLink(); ?>
+    <?php customNavigationLink(true); ?>
+    <?php customNavigationLink(); ?>
 </nav>
 <?php
 endif;

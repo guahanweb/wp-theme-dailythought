@@ -58,11 +58,13 @@ function customNextPostsLink() {
     $next = <<<EOL
 <div class="content"><h4>Older Thoughts</h4></div>
 <div class="arrow up">
-    <svg><path d="M0 0 L0 10 L20 25 L40 10 L40 0 L20 15 Z></path></svg>
+    <div class="holder">
+        <img src="%s" />
+    </div>
 </div>
 EOL;
 
-    $link = get_next_posts_link($next);
+    $link = get_next_posts_link(sprintf($next, get_template_directory_uri() . '/img/navigation.svg'));
     if ($link) {
         echo <<<EOL
 <div class="posts-link previous">

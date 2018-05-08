@@ -56,8 +56,8 @@ EOT;
 EOT;
 
     $out = $prev ?
-        previous_posts_link("${img}\n${link}") :
-        next_posts_link("${link}\n${img}");
+        get_previous_posts_link("${img}\n${link}") :
+        get_next_posts_link("${link}\n${img}");
 
     if ($out) {
         printf('<div class="page-links container">%s</div>', $out);

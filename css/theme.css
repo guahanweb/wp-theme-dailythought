@@ -468,6 +468,15 @@ a:hover {
     margin-left: 1px;
 }
 
+.page-links {
+    text-align: center;
+
+}
+
+.arrow.up img {
+    transform: rotate(180deg);
+}
+
 @media only screen and (max-device-width: 700px) {
     .container {
         width: 100%;

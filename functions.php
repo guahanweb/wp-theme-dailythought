@@ -41,10 +41,12 @@ function customNavigationLink($prev = false) {
     $title = $prev ? 'Newer Thoughts' : 'Older Thoughts';
     $src = get_template_directory_uri() . '/img/navigation.svg';
 
+    $svg = file_get_contents(__DIR__ . '/img/navigation.svg');
+
     $img = <<<EOT
 <div class="arrow ${cls}">
     <div class="holder">
-        <img src="${src}" />
+        ${svg}
     </div>
 </div>
 EOT;

@@ -470,11 +470,16 @@ a:hover {
 
 .page-links {
     text-align: center;
-
+    padding: 15px;
 }
 
-.arrow.up img {
+.arrow.up svg {
     transform: rotate(180deg);
+    width: 32px;
+}
+
+.arrow svg path {
+    fill: rgba(0, 0, 0, 0.6);
 }
 
 @media only screen and (max-device-width: 700px) {

@@ -44,18 +44,32 @@ function customPrevPostsLink() {
 <div class="content"><h4>Newer Thoughts</h4></div>
 EOL;
 
-    $prev = get_previous_posts_link($prev);
-    if ($prev) {
+    $link = get_previous_posts_link($prev);
+    if ($link) {
         echo <<<EOL
 <div class="posts-link previous">
-    ${prev}
+    ${link}
 </div>
 EOL;
     }
 }
 
 function customNextPostsLink() {
+    $next = <<<EOL
+<div class="content"><h4>Older Thoughts</h4></div>
+<div class="arrow up">
+    <svg><path d="M0 0 L0 10 L20 25 L40 10 L40 0 L20 15 Z></path></svg>
+</div>
+EOL;
 
+    $link = get_next_posts_link($next);
+    if ($link) {
+        echo <<<EOL
+<div class="posts-link previous">
+    ${link}
+</div>
+EOL;
+    }
 }
 
 function insertMetaTags() {

@@ -489,9 +489,12 @@ a:hover {
     color: #1b7996;
 }
 
+.arrow svg {
+    width: 26px;
+}
+
 .arrow.up svg {
     transform: rotate(180deg);
-    width: 26px;
 }
 
 .arrow svg path {

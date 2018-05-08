@@ -25,18 +25,16 @@ $theme = get_queried_object();
     </div>
 </div>
 
+
 <?php
 if (have_posts()):
+    customNavigationLink(true); //prev
+
     while(have_posts()): the_post();
         get_template_part('content', get_post_type());
     endwhile;
 
-?>
-<nav class="pagination">
-    <?php customNavigationLink(true); ?>
-    <?php customNavigationLink(); ?>
-</nav>
-<?php
+    customNavigationLink(); // next
 endif;
 get_footer();
 ?>

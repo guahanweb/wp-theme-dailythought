@@ -54,9 +54,9 @@ EOT;
 EOT;
 
     if ($prev) {
-        previous_posts_link("${img}\n${link}");
+        previous_posts_link("<div class=\"page-links container\">${img}\n${link}</div>");
     } else {
-        next_posts_link("${link}\n${img}");
+        next_posts_link("<div class=\"page-links container\">${link}\n${img}</div>");
     }
 
 }

@@ -55,12 +55,13 @@ EOT;
 <div class="content"><h4>${title}</h4></div>
 EOT;
 
-    if ($prev) {
-        previous_posts_link("<div class=\"page-links container\">${img}\n${link}</div>");
-    } else {
-        next_posts_link("<div class=\"page-links container\">${link}\n${img}</div>");
-    }
+    $out = $prev ?
+        previous_posts_link("${img}\n${link}") :
+        next_posts_link("${link}\n${img}");
 
+    if ($out) {
+        printf('<div class="page-links container">%s</div>', $out);
+    }
 }
 
 function insertMetaTags() {
